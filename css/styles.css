@@ -3,26 +3,24 @@
     background-color: #909090;
     border-radius: 0;
     border: 0;
+    padding: 0;
   }
  
   .navbar-brand {
-    padding-top: 25px;
+    padding: 25px 0;
   }
   .navbar-brand h1 {
     font-size: 1.5em;
     color: #222;
     text-shadow: 1px 1px 1px #222;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0 30px;
+    padding-left: 15px;
     line-height: .75;
   }
   .navbar-brand a:hover, .navbar-brand a:focus {
     text-decoration: none;
   }
   
-  #nav-list {
-    margin-top: 10px;
-  }
   #nav-list a {
     color: #222;
     text-align: center;
@@ -33,55 +31,75 @@
   #nav-list a span {
     font-size: 1.8em;
   }
-  
-  .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-    border: 1px solid #909090;
-  }
   .navbar-header button.navbar-toggle {
     clear: both;
     margin-top: -30px;
   }
-  /* END HEADER */
-
+.navbar-collapse{
+    background-color: #fff;
+}
+#nav-list > li{
+    border-bottom: 2px solid #222;
+} 
+#nav-list > :nth-child(1){
+    border-top: 2px solid #222;
+}
+li > a{
+    font-size: 18px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+li > a:focus, a:hover{
+    text-decoration: none;
+}
+#nav-list a:hover{
+    background-color: #ffffff;
+}
+.jumbotron{
+    background-color: #909090!important;
+}
   @media (max-width: 767px) {
-    /* Header */
     .navbar-brand {
       padding-top: 10px;
       height: 80px;
     }
-    .navbar-brand h1 { /* Restaurant name */
+    .navbar-brand h1 { 
       padding-top: 10px;
-      font-size: 5vw; /* 1vw = 1% of viewport width */
+      font-size: 5vw; 
     }
-    .navbar-brand p { /* Kosher cert */
-      font-size: .6em;
-      margin-top: 12px;
-    }
-    .navbar-brand p img { /* Star-K */
-      height: 20px;
-    }
-  
-    #collapsable-nav a { /* Collapsed nav menu text */
+    #collapsable-nav a { 
       font-size: 1.2em;
     }
-    #collapsable-nav a span { /* Collapsed nav menu glyph */
-      font-size: 1em;
-      margin-right: 5px;
+    .navbar-default {
+        position: relative;
     }
-  
-    #call-btn > a {
-      font-size: 1.5em;
-      display: block;
-      margin: 0 20px;
-      padding: 10px;
-      border: 2px solid #fff;
-      background-color: #f6b319;
-      color: #951c49;
+    .navbar-header button.navbar-toggle{
+        border: 1px solid #222;
+        transform: rotate(90deg);
+         background-color: #909090;
+        position: absolute;
+        top: 45px;
+        right: 5%;
     }
-    #xs-deliver {
-      margin-top: 5px;
-      font-size: .7em;
-      letter-spacing: .1em;
-      text-transform: uppercase;
+   .navbar-header .icon-bar {
+      border: 2px solid #222;
     }
-    /* End Header */
+   .navbar-toggle> :nth-child(3){
+        margin: 0 3px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-toggle{
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+.navbar-toggle{
+    display: none;
+}
+}
+@media (min-width: 1200px) {
+    .navbar-toggle{
+        display: none;
+    }
+}
